@@ -55,12 +55,7 @@ func AddOrUpdateUserData(number,
 		log.Fatalf("error creating nftcallerinstance instance:%s", err)
 	}
 	auth := gentx(3000000)
-	tx, err := instance.AddorupdateData(auth, number,
-		workamount,
-		persion,
-		workmethod,
-		worktime,
-		remarks)
+	tx, err := instance.AddProdData(auth)
 	if err != nil {
 		fmt.Println("error creating instance")
 		log.Fatal(err)

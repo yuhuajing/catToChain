@@ -9,12 +9,14 @@ import (
 
 func Explorer() {
 	app := fiber.New()
-	app.Post("/chainservice/uploadchain", uploadchain)
-	app.Post("/chainservice/updatechain", updatechain)
+	app.Post("/chainservice/prodchain", prodchain)
+	app.Post("/chainservice/logischain", uploadchain)
+	app.Post("/chainservice/salechain", uploadchain)
+	app.Post("/chainservice/repairchain", uploadchain)
 	log.Fatal(app.Listen(":3005"))
 }
 
-type OrgInfo struct {
+type CarInfo struct {
 	Number     string `json:"number"`
 	Workamount string `json:"workamount"`
 	Persion    string `json:"persion"`
@@ -28,9 +30,9 @@ type ErrorResponse struct {
 	Data    string `json:"data"`
 }
 
-func uploadchain(c *fiber.Ctx) error {
+func prodchain(c *fiber.Ctx) error {
 	fmt.Println(string(c.Body()))
-	payload := &OrgInfo{}
+	payload := &CarInfo{}
 	if err := c.BodyParser(payload); err != nil {
 		fmt.Println("Parse error")
 		return c.Status(400).JSON(ErrorResponse{
@@ -39,23 +41,7 @@ func uploadchain(c *fiber.Ctx) error {
 			Data:    "",
 		})
 	}
-	hash := sendtx.AddOrUpdateUserData(payload.Number, payload.Workamount, payload.Persion, payload.Workmethod, payload.Worktime, payload.Remarks)
-	fmt.Println(hash)
-	return c.Status(200).JSON(ErrorResponse{Error: "", Success: true, Data: hash})
-}
-
-func updatechain(c *fiber.Ctx) error {
-	fmt.Println(string(c.Body()))
-	payload := &OrgInfo{}
-	if err := c.BodyParser(payload); err != nil {
-		fmt.Println("Parse error")
-		return c.Status(400).JSON(ErrorResponse{
-			Error:   err.Error(),
-			Success: false,
-			Data:    "",
-		})
-	}
-	hash := sendtx.AddOrUpdateUserData(payload.Number, payload.Workamount, payload.Persion, payload.Workmethod, payload.Worktime, payload.Remarks)
+	hash := sendtx.AddOrUpdateProdData(payload.Number, payload.Workamount, payload.Persion, payload.Workmethod, payload.Worktime, payload.Remarks)
 	fmt.Println(hash)
 	return c.Status(200).JSON(ErrorResponse{Error: "", Success: true, Data: hash})
 }

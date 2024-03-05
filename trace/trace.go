@@ -29,20 +29,10 @@ var (
 	_ = abi.ConvertType
 )
 
-// UserPassStoreOrgInfo is an auto generated low-level Go binding around an user-defined struct.
-type UserPassStoreOrgInfo struct {
-	Number     string
-	Workamount string
-	Persion    string
-	Workmethod string
-	Worktime   string
-	Remarks    string
-}
-
 // TraceMetaData contains all meta data concerning the Trace contract.
 var TraceMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"number\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"workamount\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"persion\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"workmethod\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"worktime\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"remarks\",\"type\":\"string\"}],\"name\":\"addorupdateData\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"tracedata\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"number\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"workamount\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"persion\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"workmethod\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"worktime\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"remarks\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"number\",\"type\":\"string\"}],\"name\":\"tracedataByNum\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"number\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"workamount\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"persion\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"workmethod\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"worktime\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"remarks\",\"type\":\"string\"}],\"internalType\":\"structUserPassStore.OrgInfo\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
-	Bin: "0x608060405234801561000f575f80fd5b506111228061001d5f395ff3fe608060405234801561000f575f80fd5b506004361061003f575f3560e01c80631bb2bfea146100435780635c7e9495146100735780638a205085146100a8575b5f80fd5b61005d60048036038101906100589190610a3e565b6100c4565b60405161006a9190610ba8565b60405180910390f35b61008d60048036038101906100889190610a3e565b61045a565b60405161009f96959493929190610c10565b60405180910390f35b6100c260048036038101906100bd9190610c99565b6107cd565b005b6100cc6108bb565b5f826040516100db9190610e04565b90815260200160405180910390206040518060c00160405290815f8201805461010390610e47565b80601f016020809104026020016040519081016040528092919081815260200182805461012f90610e47565b801561017a5780601f106101515761010080835404028352916020019161017a565b820191905f5260205f20905b81548152906001019060200180831161015d57829003601f168201915b5050505050815260200160018201805461019390610e47565b80601f01602080910402602001604051908101604052809291908181526020018280546101bf90610e47565b801561020a5780601f106101e15761010080835404028352916020019161020a565b820191905f5260205f20905b8154815290600101906020018083116101ed57829003601f168201915b5050505050815260200160028201805461022390610e47565b80601f016020809104026020016040519081016040528092919081815260200182805461024f90610e47565b801561029a5780601f106102715761010080835404028352916020019161029a565b820191905f5260205f20905b81548152906001019060200180831161027d57829003601f168201915b505050505081526020016003820180546102b390610e47565b80601f01602080910402602001604051908101604052809291908181526020018280546102df90610e47565b801561032a5780601f106103015761010080835404028352916020019161032a565b820191905f5260205f20905b81548152906001019060200180831161030d57829003601f168201915b5050505050815260200160048201805461034390610e47565b80601f016020809104026020016040519081016040528092919081815260200182805461036f90610e47565b80156103ba5780601f10610391576101008083540402835291602001916103ba565b820191905f5260205f20905b81548152906001019060200180831161039d57829003601f168201915b505050505081526020016005820180546103d390610e47565b80601f01602080910402602001604051908101604052809291908181526020018280546103ff90610e47565b801561044a5780601f106104215761010080835404028352916020019161044a565b820191905f5260205f20905b81548152906001019060200180831161042d57829003601f168201915b5050505050815250509050919050565b5f818051602081018201805184825260208301602085012081835280955050505050505f91509050805f01805461049090610e47565b80601f01602080910402602001604051908101604052809291908181526020018280546104bc90610e47565b80156105075780601f106104de57610100808354040283529160200191610507565b820191905f5260205f20905b8154815290600101906020018083116104ea57829003601f168201915b50505050509080600101805461051c90610e47565b80601f016020809104026020016040519081016040528092919081815260200182805461054890610e47565b80156105935780601f1061056a57610100808354040283529160200191610593565b820191905f5260205f20905b81548152906001019060200180831161057657829003601f168201915b5050505050908060020180546105a890610e47565b80601f01602080910402602001604051908101604052809291908181526020018280546105d490610e47565b801561061f5780601f106105f65761010080835404028352916020019161061f565b820191905f5260205f20905b81548152906001019060200180831161060257829003601f168201915b50505050509080600301805461063490610e47565b80601f016020809104026020016040519081016040528092919081815260200182805461066090610e47565b80156106ab5780601f10610682576101008083540402835291602001916106ab565b820191905f5260205f20905b81548152906001019060200180831161068e57829003601f168201915b5050505050908060040180546106c090610e47565b80601f01602080910402602001604051908101604052809291908181526020018280546106ec90610e47565b80156107375780601f1061070e57610100808354040283529160200191610737565b820191905f5260205f20905b81548152906001019060200180831161071a57829003601f168201915b50505050509080600501805461074c90610e47565b80601f016020809104026020016040519081016040528092919081815260200182805461077890610e47565b80156107c35780601f1061079a576101008083540402835291602001916107c3565b820191905f5260205f20905b8154815290600101906020018083116107a657829003601f168201915b5050505050905086565b845f876040516107dd9190610e04565b908152602001604051809103902060010190816107fa919061101d565b50835f8760405161080b9190610e04565b90815260200160405180910390206002019081610828919061101d565b50825f876040516108399190610e04565b90815260200160405180910390206003019081610856919061101d565b50815f876040516108679190610e04565b90815260200160405180910390206004019081610884919061101d565b50805f876040516108959190610e04565b908152602001604051809103902060050190816108b2919061101d565b50505050505050565b6040518060c001604052806060815260200160608152602001606081526020016060815260200160608152602001606081525090565b5f604051905090565b5f80fd5b5f80fd5b5f80fd5b5f80fd5b5f601f19601f8301169050919050565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffd5b6109508261090a565b810181811067ffffffffffffffff8211171561096f5761096e61091a565b5b80604052505050565b5f6109816108f1565b905061098d8282610947565b919050565b5f67ffffffffffffffff8211156109ac576109ab61091a565b5b6109b58261090a565b9050602081019050919050565b828183375f83830152505050565b5f6109e26109dd84610992565b610978565b9050828152602081018484840111156109fe576109fd610906565b5b610a098482856109c2565b509392505050565b5f82601f830112610a2557610a24610902565b5b8135610a358482602086016109d0565b91505092915050565b5f60208284031215610a5357610a526108fa565b5b5f82013567ffffffffffffffff811115610a7057610a6f6108fe565b5b610a7c84828501610a11565b91505092915050565b5f81519050919050565b5f82825260208201905092915050565b5f5b83811015610abc578082015181840152602081019050610aa1565b5f8484015250505050565b5f610ad182610a85565b610adb8185610a8f565b9350610aeb818560208601610a9f565b610af48161090a565b840191505092915050565b5f60c083015f8301518482035f860152610b198282610ac7565b91505060208301518482036020860152610b338282610ac7565b91505060408301518482036040860152610b4d8282610ac7565b91505060608301518482036060860152610b678282610ac7565b91505060808301518482036080860152610b818282610ac7565b91505060a083015184820360a0860152610b9b8282610ac7565b9150508091505092915050565b5f6020820190508181035f830152610bc08184610aff565b905092915050565b5f82825260208201905092915050565b5f610be282610a85565b610bec8185610bc8565b9350610bfc818560208601610a9f565b610c058161090a565b840191505092915050565b5f60c0820190508181035f830152610c288189610bd8565b90508181036020830152610c3c8188610bd8565b90508181036040830152610c508187610bd8565b90508181036060830152610c648186610bd8565b90508181036080830152610c788185610bd8565b905081810360a0830152610c8c8184610bd8565b9050979650505050505050565b5f805f805f8060c08789031215610cb357610cb26108fa565b5b5f87013567ffffffffffffffff811115610cd057610ccf6108fe565b5b610cdc89828a01610a11565b965050602087013567ffffffffffffffff811115610cfd57610cfc6108fe565b5b610d0989828a01610a11565b955050604087013567ffffffffffffffff811115610d2a57610d296108fe565b5b610d3689828a01610a11565b945050606087013567ffffffffffffffff811115610d5757610d566108fe565b5b610d6389828a01610a11565b935050608087013567ffffffffffffffff811115610d8457610d836108fe565b5b610d9089828a01610a11565b92505060a087013567ffffffffffffffff811115610db157610db06108fe565b5b610dbd89828a01610a11565b9150509295509295509295565b5f81905092915050565b5f610dde82610a85565b610de88185610dca565b9350610df8818560208601610a9f565b80840191505092915050565b5f610e0f8284610dd4565b915081905092915050565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52602260045260245ffd5b5f6002820490506001821680610e5e57607f821691505b602082108103610e7157610e70610e1a565b5b50919050565b5f819050815f5260205f209050919050565b5f6020601f8301049050919050565b5f82821b905092915050565b5f60088302610ed37fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82610e98565b610edd8683610e98565b95508019841693508086168417925050509392505050565b5f819050919050565b5f819050919050565b5f610f21610f1c610f1784610ef5565b610efe565b610ef5565b9050919050565b5f819050919050565b610f3a83610f07565b610f4e610f4682610f28565b848454610ea4565b825550505050565b5f90565b610f62610f56565b610f6d818484610f31565b505050565b5b81811015610f9057610f855f82610f5a565b600181019050610f73565b5050565b601f821115610fd557610fa681610e77565b610faf84610e89565b81016020851015610fbe578190505b610fd2610fca85610e89565b830182610f72565b50505b505050565b5f82821c905092915050565b5f610ff55f1984600802610fda565b1980831691505092915050565b5f61100d8383610fe6565b9150826002028217905092915050565b61102682610a85565b67ffffffffffffffff81111561103f5761103e61091a565b5b6110498254610e47565b611054828285610f94565b5f60209050601f831160018114611085575f8415611073578287015190505b61107d8582611002565b8655506110e4565b601f19841661109386610e77565b5f5b828110156110ba57848901518255600182019150602085019450602081019050611095565b868310156110d757848901516110d3601f891682610fe6565b8355505b6001600288020188555050505b50505050505056fea2646970667358221220731cd340da8c597cf0b2179566f20ea9056d801393963ea344cdd3bc19a3930964736f6c63430008180033",
+	ABI: "[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_prodmanager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_logismanager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_salemanager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_repairmanager\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"carId\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"}],\"name\":\"addLogisData\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"carId\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"}],\"name\":\"addProdData\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"carId\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"}],\"name\":\"addRepairData\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"carId\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"}],\"name\":\"addSaleData\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"carId\",\"type\":\"string\"}],\"name\":\"getLogisData\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"carId\",\"type\":\"string\"}],\"name\":\"getProdData\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"carId\",\"type\":\"string\"}],\"name\":\"getRepairData\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"carId\",\"type\":\"string\"}],\"name\":\"getSaleData\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"logismanager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"prodmanager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"repairmanager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"salemanager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
+	Bin: "0x608060405234801562000010575f80fd5b50604051620015bf380380620015bf8339818101604052810190620000369190620001a4565b835f806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508260015f6101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508160025f6101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508060035f6101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050505062000213565b5f80fd5b5f73ffffffffffffffffffffffffffffffffffffffff82169050919050565b5f6200016e8262000143565b9050919050565b620001808162000162565b81146200018b575f80fd5b50565b5f815190506200019e8162000175565b92915050565b5f805f8060808587031215620001bf57620001be6200013f565b5b5f620001ce878288016200018e565b9450506020620001e1878288016200018e565b9350506040620001f4878288016200018e565b925050606062000207878288016200018e565b91505092959194509250565b61139e80620002215f395ff3fe6080604052600436106100aa575f3560e01c806391711cb81161006357806391711cb8146101d15780639583f02d146101fb5780639f07b36914610225578063ade8ca451461024d578063c039bbf914610289578063de2d0005146102c5576100b1565b8063064fa933146100b557806309b7f42a146100f15780630e6a3d5614610119578063156bee95146101415780635d562e971461016b57806360b1adab146101a7576100b1565b366100b157005b5f80fd5b3480156100c0575f80fd5b506100db60048036038101906100d69190610c2c565b6102ed565b6040516100e89190610da8565b60405180910390f35b3480156100fc575f80fd5b5061011760048036038101906101129190610dc8565b6103e2565b005b348015610124575f80fd5b5061013f600480360381019061013a9190610dc8565b6104c6565b005b34801561014c575f80fd5b506101556105a7565b6040516101629190610e7d565b60405180910390f35b348015610176575f80fd5b50610191600480360381019061018c9190610c2c565b6105cc565b60405161019e9190610da8565b60405180910390f35b3480156101b2575f80fd5b506101bb6106c1565b6040516101c89190610e7d565b60405180910390f35b3480156101dc575f80fd5b506101e56106e4565b6040516101f29190610e7d565b60405180910390f35b348015610206575f80fd5b5061020f610709565b60405161021c9190610e7d565b60405180910390f35b348015610230575f80fd5b5061024b60048036038101906102469190610dc8565b61072e565b005b348015610258575f80fd5b50610273600480360381019061026e9190610c2c565b610812565b6040516102809190610da8565b60405180910390f35b348015610294575f80fd5b506102af60048036038101906102aa9190610c2c565b610907565b6040516102bc9190610da8565b60405180910390f35b3480156102d0575f80fd5b506102eb60048036038101906102e69190610dc8565b6109fb565b005b60606004826040516102ff9190610ed0565b9081526020016040518091039020600301805480602002602001604051908101604052809291908181526020015f905b828210156103d7578382905f5260205f2001805461034c90610f13565b80601f016020809104026020016040519081016040528092919081815260200182805461037890610f13565b80156103c35780601f1061039a576101008083540402835291602001916103c3565b820191905f5260205f20905b8154815290600101906020018083116103a657829003601f168201915b50505050508152602001906001019061032f565b505050509050919050565b60035f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610471576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161046890610f9d565b60405180910390fd5b6004826040516104819190610ed0565b908152602001604051809103902060030181908060018154018082558091505060019003905f5260205f20015f9091909190915090816104c19190611161565b505050565b5f8054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610553576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161054a9061127a565b60405180910390fd5b6004826040516105639190610ed0565b90815260200160405180910390205f0181908060018154018082558091505060019003905f5260205f20015f9091909190915090816105a29190611161565b505050565b60025f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60606004826040516105de9190610ed0565b9081526020016040518091039020600101805480602002602001604051908101604052809291908181526020015f905b828210156106b6578382905f5260205f2001805461062b90610f13565b80601f016020809104026020016040519081016040528092919081815260200182805461065790610f13565b80156106a25780601f10610679576101008083540402835291602001916106a2565b820191905f5260205f20905b81548152906001019060200180831161068557829003601f168201915b50505050508152602001906001019061060e565b505050509050919050565b5f8054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60015f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60035f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146107bd576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016107b4906112e2565b60405180910390fd5b6004826040516107cd9190610ed0565b908152602001604051809103902060020181908060018154018082558091505060019003905f5260205f20015f90919091909150908161080d9190611161565b505050565b60606004826040516108249190610ed0565b9081526020016040518091039020600201805480602002602001604051908101604052809291908181526020015f905b828210156108fc578382905f5260205f2001805461087190610f13565b80601f016020809104026020016040519081016040528092919081815260200182805461089d90610f13565b80156108e85780601f106108bf576101008083540402835291602001916108e8565b820191905f5260205f20905b8154815290600101906020018083116108cb57829003601f168201915b505050505081526020019060010190610854565b505050509050919050565b60606004826040516109199190610ed0565b90815260200160405180910390205f01805480602002602001604051908101604052809291908181526020015f905b828210156109f0578382905f5260205f2001805461096590610f13565b80601f016020809104026020016040519081016040528092919081815260200182805461099190610f13565b80156109dc5780601f106109b3576101008083540402835291602001916109dc565b820191905f5260205f20905b8154815290600101906020018083116109bf57829003601f168201915b505050505081526020019060010190610948565b505050509050919050565b60015f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610a8a576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610a819061134a565b60405180910390fd5b600482604051610a9a9190610ed0565b908152602001604051809103902060010181908060018154018082558091505060019003905f5260205f20015f909190919091509081610ada9190611161565b505050565b5f604051905090565b5f80fd5b5f80fd5b5f80fd5b5f80fd5b5f601f19601f8301169050919050565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffd5b610b3e82610af8565b810181811067ffffffffffffffff82111715610b5d57610b5c610b08565b5b80604052505050565b5f610b6f610adf565b9050610b7b8282610b35565b919050565b5f67ffffffffffffffff821115610b9a57610b99610b08565b5b610ba382610af8565b9050602081019050919050565b828183375f83830152505050565b5f610bd0610bcb84610b80565b610b66565b905082815260208101848484011115610bec57610beb610af4565b5b610bf7848285610bb0565b509392505050565b5f82601f830112610c1357610c12610af0565b5b8135610c23848260208601610bbe565b91505092915050565b5f60208284031215610c4157610c40610ae8565b5b5f82013567ffffffffffffffff811115610c5e57610c5d610aec565b5b610c6a84828501610bff565b91505092915050565b5f81519050919050565b5f82825260208201905092915050565b5f819050602082019050919050565b5f81519050919050565b5f82825260208201905092915050565b5f5b83811015610cd3578082015181840152602081019050610cb8565b5f8484015250505050565b5f610ce882610c9c565b610cf28185610ca6565b9350610d02818560208601610cb6565b610d0b81610af8565b840191505092915050565b5f610d218383610cde565b905092915050565b5f602082019050919050565b5f610d3f82610c73565b610d498185610c7d565b935083602082028501610d5b85610c8d565b805f5b85811015610d965784840389528151610d778582610d16565b9450610d8283610d29565b925060208a01995050600181019050610d5e565b50829750879550505050505092915050565b5f6020820190508181035f830152610dc08184610d35565b905092915050565b5f8060408385031215610dde57610ddd610ae8565b5b5f83013567ffffffffffffffff811115610dfb57610dfa610aec565b5b610e0785828601610bff565b925050602083013567ffffffffffffffff811115610e2857610e27610aec565b5b610e3485828601610bff565b9150509250929050565b5f73ffffffffffffffffffffffffffffffffffffffff82169050919050565b5f610e6782610e3e565b9050919050565b610e7781610e5d565b82525050565b5f602082019050610e905f830184610e6e565b92915050565b5f81905092915050565b5f610eaa82610c9c565b610eb48185610e96565b9350610ec4818560208601610cb6565b80840191505092915050565b5f610edb8284610ea0565b915081905092915050565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52602260045260245ffd5b5f6002820490506001821680610f2a57607f821691505b602082108103610f3d57610f3c610ee6565b5b50919050565b5f82825260208201905092915050565b7f4f4e4c595f5245504149525f4d414e414745525f524f4c4500000000000000005f82015250565b5f610f87601883610f43565b9150610f9282610f53565b602082019050919050565b5f6020820190508181035f830152610fb481610f7b565b9050919050565b5f819050815f5260205f209050919050565b5f6020601f8301049050919050565b5f82821b905092915050565b5f600883026110177fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82610fdc565b6110218683610fdc565b95508019841693508086168417925050509392505050565b5f819050919050565b5f819050919050565b5f61106561106061105b84611039565b611042565b611039565b9050919050565b5f819050919050565b61107e8361104b565b61109261108a8261106c565b848454610fe8565b825550505050565b5f90565b6110a661109a565b6110b1818484611075565b505050565b5b818110156110d4576110c95f8261109e565b6001810190506110b7565b5050565b601f821115611119576110ea81610fbb565b6110f384610fcd565b81016020851015611102578190505b61111661110e85610fcd565b8301826110b6565b50505b505050565b5f82821c905092915050565b5f6111395f198460080261111e565b1980831691505092915050565b5f611151838361112a565b9150826002028217905092915050565b61116a82610c9c565b67ffffffffffffffff81111561118357611182610b08565b5b61118d8254610f13565b6111988282856110d8565b5f60209050601f8311600181146111c9575f84156111b7578287015190505b6111c18582611146565b865550611228565b601f1984166111d786610fbb565b5f5b828110156111fe578489015182556001820191506020850194506020810190506111d9565b8683101561121b5784890151611217601f89168261112a565b8355505b6001600288020188555050505b505050505050565b7f4f4e4c595f50524f445f4d414e414745525f524f4c45000000000000000000005f82015250565b5f611264601683610f43565b915061126f82611230565b602082019050919050565b5f6020820190508181035f83015261129181611258565b9050919050565b7f4f4e4c595f53414c455f4d414e414745525f524f4c45000000000000000000005f82015250565b5f6112cc601683610f43565b91506112d782611298565b602082019050919050565b5f6020820190508181035f8301526112f9816112c0565b9050919050565b7f4f4e4c595f4c4f4749535f4d414e414745525f524f4c450000000000000000005f82015250565b5f611334601783610f43565b915061133f82611300565b602082019050919050565b5f6020820190508181035f83015261136181611328565b905091905056fea2646970667358221220b1b6c1f9e5143776f3774165026d9d5a3802bee19e5eabc5aa020695e88b55ba64736f6c63430008180033",
 }
 
 // TraceABI is the input ABI used to generate the binding from.
@@ -54,7 +44,7 @@ var TraceABI = TraceMetaData.ABI
 var TraceBin = TraceMetaData.Bin
 
 // DeployTrace deploys a new Ethereum contract, binding an instance of Trace to it.
-func DeployTrace(auth *bind.TransactOpts, backend bind.ContractBackend) (common.Address, *types.Transaction, *Trace, error) {
+func DeployTrace(auth *bind.TransactOpts, backend bind.ContractBackend, _prodmanager common.Address, _logismanager common.Address, _salemanager common.Address, _repairmanager common.Address) (common.Address, *types.Transaction, *Trace, error) {
 	parsed, err := TraceMetaData.GetAbi()
 	if err != nil {
 		return common.Address{}, nil, nil, err
@@ -63,7 +53,7 @@ func DeployTrace(auth *bind.TransactOpts, backend bind.ContractBackend) (common.
 		return common.Address{}, nil, nil, errors.New("GetABI returned nil")
 	}
 
-	address, tx, contract, err := bind.DeployContract(auth, *parsed, common.FromHex(TraceBin), backend)
+	address, tx, contract, err := bind.DeployContract(auth, *parsed, common.FromHex(TraceBin), backend, _prodmanager, _logismanager, _salemanager, _repairmanager)
 	if err != nil {
 		return common.Address{}, nil, nil, err
 	}
@@ -212,119 +202,355 @@ func (_Trace *TraceTransactorRaw) Transact(opts *bind.TransactOpts, method strin
 	return _Trace.Contract.contract.Transact(opts, method, params...)
 }
 
-// Tracedata is a free data retrieval call binding the contract method 0x5c7e9495.
+// GetLogisData is a free data retrieval call binding the contract method 0x5d562e97.
 //
-// Solidity: function tracedata(string ) view returns(string number, string workamount, string persion, string workmethod, string worktime, string remarks)
-func (_Trace *TraceCaller) Tracedata(opts *bind.CallOpts, arg0 string) (struct {
-	Number     string
-	Workamount string
-	Persion    string
-	Workmethod string
-	Worktime   string
-	Remarks    string
-}, error) {
+// Solidity: function getLogisData(string carId) view returns(string[])
+func (_Trace *TraceCaller) GetLogisData(opts *bind.CallOpts, carId string) ([]string, error) {
 	var out []interface{}
-	err := _Trace.contract.Call(opts, &out, "tracedata", arg0)
-
-	outstruct := new(struct {
-		Number     string
-		Workamount string
-		Persion    string
-		Workmethod string
-		Worktime   string
-		Remarks    string
-	})
-	if err != nil {
-		return *outstruct, err
-	}
-
-	outstruct.Number = *abi.ConvertType(out[0], new(string)).(*string)
-	outstruct.Workamount = *abi.ConvertType(out[1], new(string)).(*string)
-	outstruct.Persion = *abi.ConvertType(out[2], new(string)).(*string)
-	outstruct.Workmethod = *abi.ConvertType(out[3], new(string)).(*string)
-	outstruct.Worktime = *abi.ConvertType(out[4], new(string)).(*string)
-	outstruct.Remarks = *abi.ConvertType(out[5], new(string)).(*string)
-
-	return *outstruct, err
-
-}
-
-// Tracedata is a free data retrieval call binding the contract method 0x5c7e9495.
-//
-// Solidity: function tracedata(string ) view returns(string number, string workamount, string persion, string workmethod, string worktime, string remarks)
-func (_Trace *TraceSession) Tracedata(arg0 string) (struct {
-	Number     string
-	Workamount string
-	Persion    string
-	Workmethod string
-	Worktime   string
-	Remarks    string
-}, error) {
-	return _Trace.Contract.Tracedata(&_Trace.CallOpts, arg0)
-}
-
-// Tracedata is a free data retrieval call binding the contract method 0x5c7e9495.
-//
-// Solidity: function tracedata(string ) view returns(string number, string workamount, string persion, string workmethod, string worktime, string remarks)
-func (_Trace *TraceCallerSession) Tracedata(arg0 string) (struct {
-	Number     string
-	Workamount string
-	Persion    string
-	Workmethod string
-	Worktime   string
-	Remarks    string
-}, error) {
-	return _Trace.Contract.Tracedata(&_Trace.CallOpts, arg0)
-}
-
-// TracedataByNum is a free data retrieval call binding the contract method 0x1bb2bfea.
-//
-// Solidity: function tracedataByNum(string number) view returns((string,string,string,string,string,string))
-func (_Trace *TraceCaller) TracedataByNum(opts *bind.CallOpts, number string) (UserPassStoreOrgInfo, error) {
-	var out []interface{}
-	err := _Trace.contract.Call(opts, &out, "tracedataByNum", number)
+	err := _Trace.contract.Call(opts, &out, "getLogisData", carId)
 
 	if err != nil {
-		return *new(UserPassStoreOrgInfo), err
+		return *new([]string), err
 	}
 
-	out0 := *abi.ConvertType(out[0], new(UserPassStoreOrgInfo)).(*UserPassStoreOrgInfo)
+	out0 := *abi.ConvertType(out[0], new([]string)).(*[]string)
 
 	return out0, err
 
 }
 
-// TracedataByNum is a free data retrieval call binding the contract method 0x1bb2bfea.
+// GetLogisData is a free data retrieval call binding the contract method 0x5d562e97.
 //
-// Solidity: function tracedataByNum(string number) view returns((string,string,string,string,string,string))
-func (_Trace *TraceSession) TracedataByNum(number string) (UserPassStoreOrgInfo, error) {
-	return _Trace.Contract.TracedataByNum(&_Trace.CallOpts, number)
+// Solidity: function getLogisData(string carId) view returns(string[])
+func (_Trace *TraceSession) GetLogisData(carId string) ([]string, error) {
+	return _Trace.Contract.GetLogisData(&_Trace.CallOpts, carId)
 }
 
-// TracedataByNum is a free data retrieval call binding the contract method 0x1bb2bfea.
+// GetLogisData is a free data retrieval call binding the contract method 0x5d562e97.
 //
-// Solidity: function tracedataByNum(string number) view returns((string,string,string,string,string,string))
-func (_Trace *TraceCallerSession) TracedataByNum(number string) (UserPassStoreOrgInfo, error) {
-	return _Trace.Contract.TracedataByNum(&_Trace.CallOpts, number)
+// Solidity: function getLogisData(string carId) view returns(string[])
+func (_Trace *TraceCallerSession) GetLogisData(carId string) ([]string, error) {
+	return _Trace.Contract.GetLogisData(&_Trace.CallOpts, carId)
 }
 
-// AddorupdateData is a paid mutator transaction binding the contract method 0x8a205085.
+// GetProdData is a free data retrieval call binding the contract method 0xc039bbf9.
 //
-// Solidity: function addorupdateData(string number, string workamount, string persion, string workmethod, string worktime, string remarks) returns()
-func (_Trace *TraceTransactor) AddorupdateData(opts *bind.TransactOpts, number string, workamount string, persion string, workmethod string, worktime string, remarks string) (*types.Transaction, error) {
-	return _Trace.contract.Transact(opts, "addorupdateData", number, workamount, persion, workmethod, worktime, remarks)
+// Solidity: function getProdData(string carId) view returns(string[])
+func (_Trace *TraceCaller) GetProdData(opts *bind.CallOpts, carId string) ([]string, error) {
+	var out []interface{}
+	err := _Trace.contract.Call(opts, &out, "getProdData", carId)
+
+	if err != nil {
+		return *new([]string), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([]string)).(*[]string)
+
+	return out0, err
+
 }
 
-// AddorupdateData is a paid mutator transaction binding the contract method 0x8a205085.
+// GetProdData is a free data retrieval call binding the contract method 0xc039bbf9.
 //
-// Solidity: function addorupdateData(string number, string workamount, string persion, string workmethod, string worktime, string remarks) returns()
-func (_Trace *TraceSession) AddorupdateData(number string, workamount string, persion string, workmethod string, worktime string, remarks string) (*types.Transaction, error) {
-	return _Trace.Contract.AddorupdateData(&_Trace.TransactOpts, number, workamount, persion, workmethod, worktime, remarks)
+// Solidity: function getProdData(string carId) view returns(string[])
+func (_Trace *TraceSession) GetProdData(carId string) ([]string, error) {
+	return _Trace.Contract.GetProdData(&_Trace.CallOpts, carId)
 }
 
-// AddorupdateData is a paid mutator transaction binding the contract method 0x8a205085.
+// GetProdData is a free data retrieval call binding the contract method 0xc039bbf9.
 //
-// Solidity: function addorupdateData(string number, string workamount, string persion, string workmethod, string worktime, string remarks) returns()
-func (_Trace *TraceTransactorSession) AddorupdateData(number string, workamount string, persion string, workmethod string, worktime string, remarks string) (*types.Transaction, error) {
-	return _Trace.Contract.AddorupdateData(&_Trace.TransactOpts, number, workamount, persion, workmethod, worktime, remarks)
+// Solidity: function getProdData(string carId) view returns(string[])
+func (_Trace *TraceCallerSession) GetProdData(carId string) ([]string, error) {
+	return _Trace.Contract.GetProdData(&_Trace.CallOpts, carId)
+}
+
+// GetRepairData is a free data retrieval call binding the contract method 0x064fa933.
+//
+// Solidity: function getRepairData(string carId) view returns(string[])
+func (_Trace *TraceCaller) GetRepairData(opts *bind.CallOpts, carId string) ([]string, error) {
+	var out []interface{}
+	err := _Trace.contract.Call(opts, &out, "getRepairData", carId)
+
+	if err != nil {
+		return *new([]string), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([]string)).(*[]string)
+
+	return out0, err
+
+}
+
+// GetRepairData is a free data retrieval call binding the contract method 0x064fa933.
+//
+// Solidity: function getRepairData(string carId) view returns(string[])
+func (_Trace *TraceSession) GetRepairData(carId string) ([]string, error) {
+	return _Trace.Contract.GetRepairData(&_Trace.CallOpts, carId)
+}
+
+// GetRepairData is a free data retrieval call binding the contract method 0x064fa933.
+//
+// Solidity: function getRepairData(string carId) view returns(string[])
+func (_Trace *TraceCallerSession) GetRepairData(carId string) ([]string, error) {
+	return _Trace.Contract.GetRepairData(&_Trace.CallOpts, carId)
+}
+
+// GetSaleData is a free data retrieval call binding the contract method 0xade8ca45.
+//
+// Solidity: function getSaleData(string carId) view returns(string[])
+func (_Trace *TraceCaller) GetSaleData(opts *bind.CallOpts, carId string) ([]string, error) {
+	var out []interface{}
+	err := _Trace.contract.Call(opts, &out, "getSaleData", carId)
+
+	if err != nil {
+		return *new([]string), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([]string)).(*[]string)
+
+	return out0, err
+
+}
+
+// GetSaleData is a free data retrieval call binding the contract method 0xade8ca45.
+//
+// Solidity: function getSaleData(string carId) view returns(string[])
+func (_Trace *TraceSession) GetSaleData(carId string) ([]string, error) {
+	return _Trace.Contract.GetSaleData(&_Trace.CallOpts, carId)
+}
+
+// GetSaleData is a free data retrieval call binding the contract method 0xade8ca45.
+//
+// Solidity: function getSaleData(string carId) view returns(string[])
+func (_Trace *TraceCallerSession) GetSaleData(carId string) ([]string, error) {
+	return _Trace.Contract.GetSaleData(&_Trace.CallOpts, carId)
+}
+
+// Logismanager is a free data retrieval call binding the contract method 0x91711cb8.
+//
+// Solidity: function logismanager() view returns(address)
+func (_Trace *TraceCaller) Logismanager(opts *bind.CallOpts) (common.Address, error) {
+	var out []interface{}
+	err := _Trace.contract.Call(opts, &out, "logismanager")
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// Logismanager is a free data retrieval call binding the contract method 0x91711cb8.
+//
+// Solidity: function logismanager() view returns(address)
+func (_Trace *TraceSession) Logismanager() (common.Address, error) {
+	return _Trace.Contract.Logismanager(&_Trace.CallOpts)
+}
+
+// Logismanager is a free data retrieval call binding the contract method 0x91711cb8.
+//
+// Solidity: function logismanager() view returns(address)
+func (_Trace *TraceCallerSession) Logismanager() (common.Address, error) {
+	return _Trace.Contract.Logismanager(&_Trace.CallOpts)
+}
+
+// Prodmanager is a free data retrieval call binding the contract method 0x60b1adab.
+//
+// Solidity: function prodmanager() view returns(address)
+func (_Trace *TraceCaller) Prodmanager(opts *bind.CallOpts) (common.Address, error) {
+	var out []interface{}
+	err := _Trace.contract.Call(opts, &out, "prodmanager")
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// Prodmanager is a free data retrieval call binding the contract method 0x60b1adab.
+//
+// Solidity: function prodmanager() view returns(address)
+func (_Trace *TraceSession) Prodmanager() (common.Address, error) {
+	return _Trace.Contract.Prodmanager(&_Trace.CallOpts)
+}
+
+// Prodmanager is a free data retrieval call binding the contract method 0x60b1adab.
+//
+// Solidity: function prodmanager() view returns(address)
+func (_Trace *TraceCallerSession) Prodmanager() (common.Address, error) {
+	return _Trace.Contract.Prodmanager(&_Trace.CallOpts)
+}
+
+// Repairmanager is a free data retrieval call binding the contract method 0x9583f02d.
+//
+// Solidity: function repairmanager() view returns(address)
+func (_Trace *TraceCaller) Repairmanager(opts *bind.CallOpts) (common.Address, error) {
+	var out []interface{}
+	err := _Trace.contract.Call(opts, &out, "repairmanager")
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// Repairmanager is a free data retrieval call binding the contract method 0x9583f02d.
+//
+// Solidity: function repairmanager() view returns(address)
+func (_Trace *TraceSession) Repairmanager() (common.Address, error) {
+	return _Trace.Contract.Repairmanager(&_Trace.CallOpts)
+}
+
+// Repairmanager is a free data retrieval call binding the contract method 0x9583f02d.
+//
+// Solidity: function repairmanager() view returns(address)
+func (_Trace *TraceCallerSession) Repairmanager() (common.Address, error) {
+	return _Trace.Contract.Repairmanager(&_Trace.CallOpts)
+}
+
+// Salemanager is a free data retrieval call binding the contract method 0x156bee95.
+//
+// Solidity: function salemanager() view returns(address)
+func (_Trace *TraceCaller) Salemanager(opts *bind.CallOpts) (common.Address, error) {
+	var out []interface{}
+	err := _Trace.contract.Call(opts, &out, "salemanager")
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// Salemanager is a free data retrieval call binding the contract method 0x156bee95.
+//
+// Solidity: function salemanager() view returns(address)
+func (_Trace *TraceSession) Salemanager() (common.Address, error) {
+	return _Trace.Contract.Salemanager(&_Trace.CallOpts)
+}
+
+// Salemanager is a free data retrieval call binding the contract method 0x156bee95.
+//
+// Solidity: function salemanager() view returns(address)
+func (_Trace *TraceCallerSession) Salemanager() (common.Address, error) {
+	return _Trace.Contract.Salemanager(&_Trace.CallOpts)
+}
+
+// AddLogisData is a paid mutator transaction binding the contract method 0xde2d0005.
+//
+// Solidity: function addLogisData(string carId, string description) returns()
+func (_Trace *TraceTransactor) AddLogisData(opts *bind.TransactOpts, carId string, description string) (*types.Transaction, error) {
+	return _Trace.contract.Transact(opts, "addLogisData", carId, description)
+}
+
+// AddLogisData is a paid mutator transaction binding the contract method 0xde2d0005.
+//
+// Solidity: function addLogisData(string carId, string description) returns()
+func (_Trace *TraceSession) AddLogisData(carId string, description string) (*types.Transaction, error) {
+	return _Trace.Contract.AddLogisData(&_Trace.TransactOpts, carId, description)
+}
+
+// AddLogisData is a paid mutator transaction binding the contract method 0xde2d0005.
+//
+// Solidity: function addLogisData(string carId, string description) returns()
+func (_Trace *TraceTransactorSession) AddLogisData(carId string, description string) (*types.Transaction, error) {
+	return _Trace.Contract.AddLogisData(&_Trace.TransactOpts, carId, description)
+}
+
+// AddProdData is a paid mutator transaction binding the contract method 0x0e6a3d56.
+//
+// Solidity: function addProdData(string carId, string description) returns()
+func (_Trace *TraceTransactor) AddProdData(opts *bind.TransactOpts, carId string, description string) (*types.Transaction, error) {
+	return _Trace.contract.Transact(opts, "addProdData", carId, description)
+}
+
+// AddProdData is a paid mutator transaction binding the contract method 0x0e6a3d56.
+//
+// Solidity: function addProdData(string carId, string description) returns()
+func (_Trace *TraceSession) AddProdData(carId string, description string) (*types.Transaction, error) {
+	return _Trace.Contract.AddProdData(&_Trace.TransactOpts, carId, description)
+}
+
+// AddProdData is a paid mutator transaction binding the contract method 0x0e6a3d56.
+//
+// Solidity: function addProdData(string carId, string description) returns()
+func (_Trace *TraceTransactorSession) AddProdData(carId string, description string) (*types.Transaction, error) {
+	return _Trace.Contract.AddProdData(&_Trace.TransactOpts, carId, description)
+}
+
+// AddRepairData is a paid mutator transaction binding the contract method 0x09b7f42a.
+//
+// Solidity: function addRepairData(string carId, string description) returns()
+func (_Trace *TraceTransactor) AddRepairData(opts *bind.TransactOpts, carId string, description string) (*types.Transaction, error) {
+	return _Trace.contract.Transact(opts, "addRepairData", carId, description)
+}
+
+// AddRepairData is a paid mutator transaction binding the contract method 0x09b7f42a.
+//
+// Solidity: function addRepairData(string carId, string description) returns()
+func (_Trace *TraceSession) AddRepairData(carId string, description string) (*types.Transaction, error) {
+	return _Trace.Contract.AddRepairData(&_Trace.TransactOpts, carId, description)
+}
+
+// AddRepairData is a paid mutator transaction binding the contract method 0x09b7f42a.
+//
+// Solidity: function addRepairData(string carId, string description) returns()
+func (_Trace *TraceTransactorSession) AddRepairData(carId string, description string) (*types.Transaction, error) {
+	return _Trace.Contract.AddRepairData(&_Trace.TransactOpts, carId, description)
+}
+
+// AddSaleData is a paid mutator transaction binding the contract method 0x9f07b369.
+//
+// Solidity: function addSaleData(string carId, string description) returns()
+func (_Trace *TraceTransactor) AddSaleData(opts *bind.TransactOpts, carId string, description string) (*types.Transaction, error) {
+	return _Trace.contract.Transact(opts, "addSaleData", carId, description)
+}
+
+// AddSaleData is a paid mutator transaction binding the contract method 0x9f07b369.
+//
+// Solidity: function addSaleData(string carId, string description) returns()
+func (_Trace *TraceSession) AddSaleData(carId string, description string) (*types.Transaction, error) {
+	return _Trace.Contract.AddSaleData(&_Trace.TransactOpts, carId, description)
+}
+
+// AddSaleData is a paid mutator transaction binding the contract method 0x9f07b369.
+//
+// Solidity: function addSaleData(string carId, string description) returns()
+func (_Trace *TraceTransactorSession) AddSaleData(carId string, description string) (*types.Transaction, error) {
+	return _Trace.Contract.AddSaleData(&_Trace.TransactOpts, carId, description)
+}
+
+// Receive is a paid mutator transaction binding the contract receive function.
+//
+// Solidity: receive() payable returns()
+func (_Trace *TraceTransactor) Receive(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _Trace.contract.RawTransact(opts, nil) // calldata is disallowed for receive function
+}
+
+// Receive is a paid mutator transaction binding the contract receive function.
+//
+// Solidity: receive() payable returns()
+func (_Trace *TraceSession) Receive() (*types.Transaction, error) {
+	return _Trace.Contract.Receive(&_Trace.TransactOpts)
+}
+
+// Receive is a paid mutator transaction binding the contract receive function.
+//
+// Solidity: receive() payable returns()
+func (_Trace *TraceTransactorSession) Receive() (*types.Transaction, error) {
+	return _Trace.Contract.Receive(&_Trace.TransactOpts)
 }
