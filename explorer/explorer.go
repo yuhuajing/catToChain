@@ -10,9 +10,9 @@ import (
 func Explorer() {
 	app := fiber.New()
 	app.Post("/chainservice/prodchain", prodchain)
-	app.Post("/chainservice/logischain", uploadchain)
-	app.Post("/chainservice/salechain", uploadchain)
-	app.Post("/chainservice/repairchain", uploadchain)
+	//app.Post("/chainservice/logischain", uploadchain)
+	//app.Post("/chainservice/salechain", uploadchain)
+	//app.Post("/chainservice/repairchain", uploadchain)
 	log.Fatal(app.Listen(":3005"))
 }
 
@@ -41,7 +41,8 @@ func prodchain(c *fiber.Ctx) error {
 			Data:    "",
 		})
 	}
-	hash := sendtx.AddOrUpdateProdData(payload.Number, payload.Workamount, payload.Persion, payload.Workmethod, payload.Worktime, payload.Remarks)
+	description := ""
+	hash := sendtx.AddOrUpdateData(payload.Number, description, 0)
 	fmt.Println(hash)
 	return c.Status(200).JSON(ErrorResponse{Error: "", Success: true, Data: hash})
 }

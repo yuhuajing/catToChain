@@ -42,12 +42,7 @@ func gentx(gaslimit uint64) *bind.TransactOpts {
 	auth.GasPrice = gasPrice
 	return auth
 }
-func AddOrUpdateUserData(number,
-	workamount,
-	persion,
-	workmethod,
-	worktime,
-	remarks string) string {
+func AddOrUpdateData(number, description string, typechain int) string {
 	address := common.HexToAddress(config.TraceSC)
 	fmt.Println(1)
 	instance, err := trace.NewTrace(address, config.Client)
@@ -55,11 +50,36 @@ func AddOrUpdateUserData(number,
 		log.Fatalf("error creating nftcallerinstance instance:%s", err)
 	}
 	auth := gentx(3000000)
-	tx, err := instance.AddProdData(auth)
-	if err != nil {
-		fmt.Println("error creating instance")
-		log.Fatal(err)
+	switch typechain {
+	case 0:
+		tx, err := instance.AddProdData(auth, number, description)
+		if err != nil {
+			fmt.Println("error creating instance")
+			log.Fatal(err)
+		}
+		return tx.Hash().Hex()
+	case 1:
+		tx, err := instance.AddLogisData(auth, number, description)
+		if err != nil {
+			fmt.Println("error creating instance")
+			log.Fatal(err)
+		}
+		return tx.Hash().Hex()
+	case 2:
+		tx, err := instance.AddSaleData(auth, number, description)
+		if err != nil {
+			fmt.Println("error creating instance")
+			log.Fatal(err)
+		}
+		return tx.Hash().Hex()
+	case 3:
+		tx, err := instance.AddRepairData(auth, number, description)
+		if err != nil {
+			fmt.Println("error creating instance")
+			log.Fatal(err)
+		}
+		return tx.Hash().Hex()
 	}
-	return tx.Hash().Hex()
+	return ""
 	//fmt.Printf("tx sent: %s", tx.Hash().Hex())
 }

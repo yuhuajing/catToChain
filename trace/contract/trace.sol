@@ -8,7 +8,7 @@ contract carTrace {
         string[] saleinfo;
         string[] repairinfo;
     }
-
+    address public owner;
     address public prodmanager;
     address public logismanager;
     address public salemanager;
@@ -22,6 +22,7 @@ contract carTrace {
         address _salemanager,
         address _repairmanager
     ) {
+        owner = msg.sender;
         prodmanager = _prodmanager;
         logismanager = _logismanager;
         salemanager = _salemanager;
@@ -30,6 +31,10 @@ contract carTrace {
 
     modifier onlyProdManager() {
         require(msg.sender == prodmanager, "ONLY_PROD_MANAGER_ROLE");
+        _;
+    }
+    modifier onlyOwner() {
+        require(msg.sender == owner, "ONLY_OWNER_ROLE");
         _;
     }
     modifier onlyLogisManager() {
@@ -45,10 +50,27 @@ contract carTrace {
         _;
     }
 
+    function setProdManager(address _r) external onlyOwner {
+        prodmanager = _r;
+    }
+
+    function setLogisManager(address _r) external onlyOwner {
+        logismanager = _r;
+    }
+
+    function setSaleManager(address _r) external onlyOwner {
+        salemanager = _r;
+    }
+
+    function setRepairManager(address _r) external onlyOwner {
+        repairmanager = _r;
+    }
+
     receive() external payable {}
 
     function addProdData(string memory carId, string memory description)
-    onlyProdManager external
+    external
+    onlyProdManager
     {
         carTraceInfo[carId].prodinfo.push(description);
     }
@@ -62,7 +84,8 @@ contract carTrace {
     }
 
     function addLogisData(string memory carId, string memory description)
-    onlyLogisManager external
+    external
+    onlyLogisManager
     {
         carTraceInfo[carId].logisinfo.push(description);
     }
@@ -76,7 +99,8 @@ contract carTrace {
     }
 
     function addSaleData(string memory carId, string memory description)
-    onlySaleManager external
+    external
+    onlySaleManager
     {
         carTraceInfo[carId].saleinfo.push(description);
     }
@@ -90,7 +114,8 @@ contract carTrace {
     }
 
     function addRepairData(string memory carId, string memory description)
-    onlyRepaieManager external
+    external
+    onlyRepaieManager
     {
         carTraceInfo[carId].repairinfo.push(description);
     }
