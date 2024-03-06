@@ -13,12 +13,40 @@ import (
 	"math/big"
 )
 
-func gentx(gaslimit uint64) *bind.TransactOpts {
-	//0x6593B47be3F4Bd1154c2faFb8Ad4aC4EFddD618f
-	privateKey, err := crypto.HexToECDSA("797391c7bd2e156e52329ceb6471496798e0c125ef35c4c3393329bd2a64f3f5")
-	if err != nil {
-		log.Fatal(err)
+func gentx(gaslimit uint64, typechain int) *bind.TransactOpts {
+	var privateKey *ecdsa.PrivateKey
+	var err error
+	switch typechain {
+	case 0:
+		//Prod
+		//0xa39982a30d9DD7639F4340b3d90C6792cB38EE61
+		privateKey, err = crypto.HexToECDSA("55cae8779390b54ce6b4328e47082fc5fb6bd1293b477c7e934853edd7884cf0")
+		if err != nil {
+			log.Fatal(err)
+		}
+	case 1:
+		//Logis
+		//0x319E2178e70f28804946Ba4b178F8664f6AC0d0f
+		privateKey, err = crypto.HexToECDSA("79c46a339c04777a5bd370aebaf124e2a14431effc270f60e9da44eebcf783a2")
+		if err != nil {
+			log.Fatal(err)
+		}
+	case 2:
+		//Sale
+		//0x9d905f4c261c60c541355D9C2E3e0A941E3dCF67
+		privateKey, err = crypto.HexToECDSA("dc8722425f3d307eccef3bbe55d27a25ea6c735b1fc2fb74ce223101d5a3c75c")
+		if err != nil {
+			log.Fatal(err)
+		}
+	case 3:
+		//Repair
+		//0x0DB76B5a2e462c9b2577E880F22762fE8AbF5819
+		privateKey, err = crypto.HexToECDSA("b5daee2ba58d114be736fe4e20adfa637506f7790372645d322b856f3edabac6")
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
+
 	publicKey := privateKey.Public()
 	publicKeyECDSA, ok := publicKey.(*ecdsa.PublicKey)
 	if !ok {
@@ -50,7 +78,7 @@ func AddOrUpdateData(number, description string, typechain int) string {
 	if err != nil {
 		log.Fatalf("error creating nftcallerinstance instance:%s", err)
 	}
-	auth := gentx(3000000)
+	auth := gentx(3000000, typechain)
 	switch typechain {
 	case 0:
 		tx, err := instance.AddProdData(auth, number, description)
